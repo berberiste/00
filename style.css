@@ -1,0 +1,438 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body
+{
+   overflow-x: hidden;
+}
+
+
+
+/*l'entete de la page*/
+.contour
+{
+   overflow: hidden;
+   width: 100%;
+   height: 90px;
+   background-color:orangered;
+}
+
+.contour #signe
+{
+   position: relative;
+   display: flex;
+   top: 20px;
+   left: 20px;
+   letter-spacing: 5px;
+   width: fit-content;
+   border: solid;
+   border-radius: 0 15px;
+}
+
+.contour input
+{
+   border-radius: 10px;
+   position: relative;
+   left: 40%;
+   bottom: 10px;
+   height: 40%;
+   width: 40%;
+}
+
+.contour img
+{
+   border-radius: 10px;
+   position: relative;
+   left: 80%;
+   bottom: 48px;
+   width: 40px;
+   height: 40%;
+   display: flex;
+   cursor: pointer;
+}
+
+.animation
+{
+   border: solid;
+   position: relative;
+   left: 25%;
+   bottom:120%;
+   width: 10%;
+   height: 100%;
+   animation-name: picture;
+   animation-duration: 20s;
+   animation-iteration-count: infinite;
+   background-size: cover;
+}
+
+@keyframes picture{
+   from{background-image: url(./imagesPC/pc13.jpg);}
+   25%{background-image:url(./imagesPC/pc11.jpg) ;}
+   50%{background-image: url(./imagesPC/pc12.jpg);}
+   to{background-image: url(./imagesPC/pc13.jpg);}
+}
+
+#cont{
+   position: absolute;
+   top: 35px;
+   left: 90%;
+   width: 40px;
+   height: 40px;
+}
+
+#image1
+{
+   width: 100%;
+}
+
+
+.titre h3
+{
+   border: solid;
+   text-align: center;
+}
+
+.titre
+{
+   margin:10px 0  0 100px;
+   cursor: pointer;
+   width: fit-content;
+   height: 30px;
+}
+
+.titre:hover {
+   transition: 1s;
+   height: 100px;
+}
+
+.liens
+{
+   height: 70px;
+   position: relative;
+   text-align: center;
+   border: groove;
+   width: fit-content;
+   margin: 20px;
+   font-size: 20px;
+   opacity: 0;
+   background-color: white;
+}
+
+.titre:hover .liens
+{
+   opacity: 1;
+   transition: 2s;
+}
+
+.texte h3
+{
+   position: relative;
+   top: 20px;
+   left: 20px;
+   text-decoration: underline;
+}
+
+.texte p
+{
+   width: fit-content; 
+   position: relative;
+   top: 20px;
+}
+
+.marque{
+   display: flex;
+   height: 100px;
+   justify-content: space-between;
+   margin: 0 100px;
+}
+.marque img{
+   width:100px;
+   height: 100px;
+}
+.marque img:hover
+{
+   cursor: pointer;
+   box-shadow: 0 0 0 7px ;
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+/*boutton de trie et boutton de validation*/
+.trie
+{
+   position: relative;
+   top: 50px;
+   border: solid;
+   width:25%;
+   margin-left: 70%;
+}
+
+.trie select
+{
+   width: 100%;
+   height: 40px;
+}
+
+#affiche,#valide
+{
+   width: 40px;
+   border-radius: 50%;
+   height: 40px;
+   text-align: center;
+   cursor: pointer; 
+   position: fixed;
+   top: 0;
+   z-index: 3;
+   font-size: 30px;
+   border: none;
+}
+
+#affiche
+{
+   display: block;
+   background-color:gray;
+}
+#valide{
+   display: none;
+   background-color: red;
+}
+
+#btn{
+   height: 15%;
+   width: 100%;
+}
+
+#btn4
+{
+   width: 80%;
+   background-color: orangered;
+   cursor: pointer;
+   margin: 0 0 0 10%;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+
+
+/*choisir differents champs pour votre ordinateur*/
+#choix{
+   width:100%;
+   position: fixed;
+   top:20px;
+   left: -100%;
+   transition: 3s;
+   z-index: 2;
+}
+
+.choi
+{
+   border: solid;
+   background-color: white;
+   border-top-right-radius: 20px;
+   border-bottom-right-radius: 20px;
+   text-align: left;
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+
+.choi div{
+    position: relative;
+    border: groove;
+    border-radius: 10px;
+    width: 25%;
+    padding: 10px;
+    background:gray;}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+/*les produits*/
+section{
+   margin-top: 10%;
+   display: flex;
+   width: 100%;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.carte
+{   
+
+   overflow: hidden;
+   position: relative;
+   left: 6px;
+   width: 220px;
+   height: 370px;
+   box-shadow: 0 3px 15px rgba(0,0,0,0.7);
+   margin:10px;
+}
+
+.carte .details
+{
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   height: 50%;
+   padding: 12px;
+   background-color: gray;
+   transition: all 0.5s cubic-bezier(48, -0.28, 0.41, 1.4);
+   box-sizing: border-box;
+}
+
+.carte:hover .details
+{
+   transition: all 1s;
+   position: absolute;
+   height: 80%;
+   overflow: visible;
+   cursor: pointer;
+}
+
+.details li
+{
+   opacity: 0; 
+   transition: 0.5s;
+   margin-left:10px;
+   margin-top:18px;
+}
+
+.details:hover li{opacity: 1;}
+
+.carte:hover{box-shadow: 0 0 5em rgba(0,0,0,0.4);}
+
+.carte button{
+   cursor: pointer;
+    position: relative;
+    width: 50%;
+    left: 25%;
+    height: 40px;
+   }
+
+.carte button:hover{background-color: red;transition: .4s;}
+
+.carte #prix{
+   color:orange;
+   text-align: center;
+   text-decoration: underline;
+}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+
+/*le tableau de configuration*/
+table{border: solid;}
+tr{height: 40px;background-color: rgb(163, 161, 161);}
+.info
+{
+   background-color: white;
+   position: relative;
+   display: flex;
+   box-shadow: 0 3px 15px rgba(0,0,0,0.7);
+   justify-content: center;
+   border: solid;
+}
+.info h3{margin:2%;}
+.info img{margin:5px;}
+.info h1{font-size:50px;margin:5px;color:rgb(92, 89, 89);}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+/*la derniere partie*/
+footer{background-color: orangered;}
+
+.info2
+{
+   display: grid;
+   grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+   color: white;
+   justify-content: center;
+}
+
+.info2  a{color: white;text-decoration: none;margin: 3%;}
+a:hover{text-decoration: underline;}
+.info2 div{margin: 3%;}
+
+.aide{
+   margin-left:43%;
+   margin-bottom: 10px;
+   color: white;
+   text-align: center;
+   border-radius: 9px; 
+   cursor: pointer; 
+   background-color: rgb(255, 43, 43);
+   width: 130px;
+   height: 25px;
+}
+
+.aide:hover{transition: 1s; letter-spacing: 2px;}
+
+.info3{
+   width: 40%;
+   background: white;
+   height: 100px;
+   position: relative;
+   margin-left: 30%;
+   bottom: 10px;
+   margin-top:5%;
+}
+
+#tele{height: 30px;cursor: pointer;}
+
+.info3 h3{text-align: center;}
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+
+
+/*style pour le message*/
+.msg1{
+   background: green;
+   font-size: 20px
+   ;height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 5%;
+   border-radius: 5px;
+}
+
+#msg{
+   display: none;
+   background: gray;
+   position: fixed;
+   top: 5%;
+   left: 10%;
+   right: 10%;
+   bottom: 10% ;
+   width: 80%;
+   height: 90%;
+   border-radius: 20px;
+   transition: 5s;
+}
+
+.msg2,.msg3
+{
+   border: groove;
+   width: 30%;
+   height: 30px;
+   border-radius: 9px;
+   cursor: pointer;
+   display: inline-block;
+   text-align: center;
+   margin:0 8%;
+   box-shadow: 0 0 7px 0;
+}
+
+.msg3{background-color: #f46036;}
+.msg2:hover{background-color: #f46036;}
+.msg3:hover{letter-spacing: 1px;}
